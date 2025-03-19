@@ -36,6 +36,7 @@ export const Section = styled.section<{
 `;
 
 export const IconsRow = styled.div`
+  max-width: 768px;
   width: 100%;
   display: flex;
   align-items: center;
