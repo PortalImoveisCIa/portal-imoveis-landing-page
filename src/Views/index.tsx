@@ -28,6 +28,10 @@ export function LandingPage() {
   const domain =
     searchParams.get("environment") === "hml" ? "devdashboard" : "dashboard";
 
+  const currentYear = new Intl.DateTimeFormat("pt-BR", {
+    year: "numeric",
+  }).format();
+
   return (
     <S.Main>
       <S.Section $isDark>
@@ -36,14 +40,15 @@ export function LandingPage() {
             fontSize: "3rem",
             textAlign: "center",
             marginBottom: "1rem",
-          }}>
+          }}
+        >
           Portal{" "}
           <b style={{ fontSize: "3rem" }}>
             Imóveis <b className="comercial-e">&</b> Cia
           </b>
         </span>
 
-        <p style={{ fontSize: "1.5rem" }}>
+        <p style={{ fontSize: "1.5rem", marginBottom: "2rem" }}>
           O único <b>Portal Imobiliário exclusivo do litoral Catarinense</b> com
           Acelerador de Resultados
         </p>
@@ -106,6 +111,12 @@ export function LandingPage() {
           icon={<BsArrowRight size={20} />}
           href={`https://${domain}.portalimoveisecia.com.br/auth/sign-up`}
         />
+      </S.Section>
+      <S.Section $isDark style={{ padding: ".3rem" }}>
+        <p style={{ width: "100%", maxWidth: "100%" }}>
+          www.portalimoveisecia.com.br - © {currentYear} | Todos os direitos
+          reservados
+        </p>
       </S.Section>
     </S.Main>
   );

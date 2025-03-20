@@ -19,7 +19,6 @@ export const Section = styled.section<{
     $isDark ? theme.colors.white : theme.colors.black};
   padding: 2rem 4rem;
   font-size: 2.75rem;
-  word-wrap: break-word;
 
   .comercial-e {
     color: ${({ theme }) => theme.colors.primary};
@@ -41,7 +40,6 @@ export const Section = styled.section<{
   }
 
   p {
-    margin: 0 0 2rem 0;
     text-align: center;
     font-size: 1rem;
     max-width: 50%;
@@ -67,19 +65,11 @@ export const Section = styled.section<{
       max-width: 90%;
     }
   }
-
-  /* @media (max-width: 480px) {
-    font-size: 1rem;
-    padding: 1rem;
-    p {
-      font-size: 0.8rem;
-      max-width: 100%;
-    }
-  } */
 `;
 
 export const IconsRow = styled.div`
   width: 100%;
+  max-width: 768px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
